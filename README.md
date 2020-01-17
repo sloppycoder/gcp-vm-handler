@@ -39,4 +39,12 @@ python main.py
 ```
 gcloud functions deploy vm_action --runtime python37 --trigger-http
 
+# create a scheduled job to send request to shutdown at 2am Singapore time
+
+gcloud scheduler jobs create http stop-vm \
+    --schedule="05 02 * * *" \
+    --time-zone="Asia/Singapore" \
+    --http-method=get \
+    --uri="<FUNCTION_URL_WITH_PARAMETERS"
+
 ```
