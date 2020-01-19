@@ -45,6 +45,6 @@ gcloud scheduler jobs create http stop-vm \
     --schedule="05 02 * * *" \
     --time-zone="Asia/Singapore" \
     --http-method=get \
-    --uri="<FUNCTION_URL_WITH_PARAMETERS"
+    --uri="<FUNCTION_URL_WITH_PARAMETERS>"
 
 ```
